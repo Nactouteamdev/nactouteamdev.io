@@ -1,0 +1,232 @@
+
+#powerOverlay {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #ff00ff;
+    padding: 20px 40px;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    opacity: 0;
+    transform: scale(0.5);
+    pointer-events: none;
+    animation: powerAnimation 2s forwards;
+    z-index: 1000;
+}
+
+@keyframes powerAnimation {
+    0% {
+        opacity: 0;
+        transform: scale(0.5) rotate(0deg);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2) rotate(10deg);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+#trailCanvas {
+    z-index: 1;
+    pointer-events: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: #0a0a0a;
+    color: #f0f0f0;
+    overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    nav button {
+        width: 80%;
+        margin: 10px 0;
+    }
+    .hero h2 {
+        font-size: 2rem;
+    }
+    .hero p, .content p {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+    .content {
+        padding: 20px;
+    }
+    .infos-discord, .fivem, .ambitions {
+        width: 90%;
+        padding: 15px;
+    }
+    #btn-retour {
+        width: 80%;
+    }
+}
+
+#background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #1f1c2c, #928dab);
+    z-index: -1;
+    transition: background 0.5s ease;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px #ff00ff;
+}
+
+nav button {
+    margin: 10px;
+    padding: 10px 20px;
+    background: #ff00ff;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+nav button:hover {
+    transform: scale(1.05);
+}
+
+.hero {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    text-shadow: 0 0 15px #00ffff;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    text-shadow: 0 0 10px #00ffff;
+}
+
+.content {
+    padding: 40px;
+    text-align: center;
+}
+
+.content h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #00ff00;
+}
+
+.content p {
+    font-size: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    position: relative;
+}
+
+.infos-discord, .fivem, .ambitions {
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 20px;
+    background: rgba(20, 20, 20, 0.8);
+    border-radius: 10px;
+}
+
+.infos-discord h2, .fivem h2, .ambitions h2 {
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px #ff00ff;
+}
+
+.infos-discord a, .fivem a {
+    color: #00ffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#btn-retour {
+    display: block;
+    margin: 30px auto;
+    padding: 10px 20px;
+    background: #00ffff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+#btn-retour:hover {
+    transform: scale(1.05);
+}
+
+#powerOverlayLeft {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #00ffff;
+    padding: 20px 40px;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    opacity: 0;
+    transform: scale(0.5);
+    pointer-events: none;
+    animation: powerAnimationLeft 2s forwards;
+    z-index: 1000;
+}
+
+@keyframes powerAnimationLeft {
+    0% {
+        opacity: 0;
+        transform: scale(0.5) rotate(0deg);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2) rotate(-10deg);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1) rotate(0deg);
+    }
+}

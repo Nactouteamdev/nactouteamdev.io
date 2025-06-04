@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Électro Professionnel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="background"></div>
+    <header>
+        <h1>Informations de Nactou 🤖</h1>
+        <nav>
+            <button id="btn-reglement">Règlement 📜</button>
+            <button id="btn-infos">Mes informations 👀</button>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <h2>🌊🌟 WISE #1 🌟🌊</h2>
+            <p>Un serveur d'exception</p>
+        </section>
+        <section class="content">
+            <h3>Nous ?</h3>
+            <p>Nous, nous innovons constamment pour offrir la meilleure expérience aux joueurs de notre serveur "🌊 Wise FA 🌊".</p>
+        </section>
+    </main>
+    <footer>
+        <p>© 2025 NCU-TeamDev. Tous droits réservés.</p>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('btn-reglement').addEventListener('click', () => {
+            window.location.href = 'https://wise-fa.gitbook.io/wisefa';
+        });
+        document.getElementById('btn-infos').addEventListener('click', () => {
+            window.location.href = 'info.html';
+        });
+    </script>
+</body>
+</html>
